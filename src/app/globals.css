@@ -207,6 +207,13 @@ body {
   width: 100%;
 }
 
+/* Logo on dark surfaces:
+ * invert(1) turns black "PRO" into white; hue-rotate(180deg) rotates the
+ * inverted gold back to gold. Net effect: black → white, gold stays gold. */
+.logo-dark {
+  filter: invert(1) hue-rotate(180deg) saturate(1.15);
+}
+
 /* hero ambient grid */
 .hero-grid {
   background-image: linear-gradient(

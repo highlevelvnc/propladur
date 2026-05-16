@@ -40,17 +40,12 @@ export function Header() {
           <Image
             src="/logo.png"
             alt={COMPANY.name}
-            width={44}
-            height={44}
+            width={180}
+            height={56}
             priority
-            className="h-10 w-auto object-contain"
+            className="h-11 sm:h-12 w-auto object-contain logo-dark"
           />
-          <span className="hidden sm:flex flex-col leading-tight">
-            <span className="font-display font-bold tracking-tightish text-lg text-white">
-              PRO <span className="gold-text">PLADUR</span>
-            </span>
-            <span className="label-caps text-muted">Porto · Portugal</span>
-          </span>
+          <span className="sr-only">{COMPANY.name}</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

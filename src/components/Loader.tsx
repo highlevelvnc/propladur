@@ -68,18 +68,23 @@ export function Loader() {
       <span className="absolute bottom-10 right-10 h-10 w-10 border-b border-r border-gold-400/60" />
 
       <div className="relative flex flex-col items-center px-8 text-center">
-        <span className="label-caps text-gold-300 mb-6">
+        <span className="label-caps text-gold-300 mb-8">
           Porto · Portugal
         </span>
 
-        {/* Brand mark with plumb-line drawing */}
+        {/* Brand mark */}
         <div className="relative">
-          <h1 className="font-display font-extrabold tracking-tightish text-4xl sm:text-6xl text-white">
-            PRO <span className="gold-text">PLADUR</span>
-          </h1>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.png"
+            alt="PRO PLADUR"
+            width={280}
+            height={88}
+            className="h-20 sm:h-24 w-auto object-contain logo-dark"
+          />
           <span
             aria-hidden
-            className="block mx-auto mt-4 h-px w-40 bg-gradient-to-r from-transparent via-gold-400 to-transparent"
+            className="block mx-auto mt-5 h-px w-40 bg-gradient-to-r from-transparent via-gold-400 to-transparent"
           />
         </div>
 
