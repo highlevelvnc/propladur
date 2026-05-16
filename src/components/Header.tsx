@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { NAV_LINKS, WHATSAPP_URL, COMPANY } from "@/lib/constants";
+import { SocialIcons } from "./SocialIcons";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -67,6 +68,8 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
+          <SocialIcons variant="header" />
+          <span aria-hidden className="h-6 w-px bg-white/15" />
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -141,6 +144,13 @@ export function Header() {
           >
             Pedir Orçamento via WhatsApp
           </a>
+
+          <div className="mt-8">
+            <span className="label-caps text-gold-300 block mb-3">
+              Siga-nos
+            </span>
+            <SocialIcons variant="menu" />
+          </div>
 
           <div className="mt-auto pt-10 text-sm text-muted">
             <p>{COMPANY.region}</p>

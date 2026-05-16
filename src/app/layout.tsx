@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import { COMPANY } from "@/lib/constants";
+import { COMPANY, SOCIAL } from "@/lib/constants";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -80,6 +80,7 @@ const jsonLd = {
   areaServed: "Porto e arredores",
   description:
     "Especialistas em montagem de pladur, acabamentos, pinturas, renovações e remodelações no Porto.",
+  sameAs: SOCIAL.map((s) => s.href),
 };
 
 export default function RootLayout({

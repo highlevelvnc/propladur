@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { COMPANY, NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
+import { SocialIcons } from "./SocialIcons";
 
 const SERVICES = [
   "Montagem de Pladur",
@@ -94,6 +95,12 @@ export function Footer() {
             <li className="text-white/70">{COMPANY.region}</li>
             <li className="text-white/70">{COMPANY.serviceArea}</li>
           </ul>
+          <div className="mt-6">
+            <span className="label-caps text-gold-300 block mb-3">
+              Siga-nos
+            </span>
+            <SocialIcons variant="footer" />
+          </div>
         </div>
       </div>
 

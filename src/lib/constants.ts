@@ -20,6 +20,19 @@ export const COMPANY = {
   url: "https://propladur.pt",
 } as const;
 
+export const SOCIAL = [
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/propladur.pt",
+    handle: "@propladur.pt",
+  },
+  {
+    name: "Facebook",
+    href: "https://www.facebook.com/share/18v78w3Fvc/",
+    handle: "PRO PLADUR",
+  },
+] as const;
+
 export const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#servicos" },
