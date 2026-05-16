@@ -51,8 +51,9 @@ export function Services() {
             eyebrow="O que fazemos"
             title={
               <>
-                Soluções completas em pladur,{" "}
-                <span className="gold-text">pinturas</span> e remodelações
+                Soluções completas em{" "}
+                <span className="italic-accent gold-text">pladur</span>,
+                pinturas e remodelações
               </>
             }
             subtitle="Sete serviços, uma só equipa. Da estrutura ao último acabamento, executamos cada fase com método, materiais de qualidade e responsabilidade total pelo resultado."
@@ -84,7 +85,7 @@ export function Services() {
                   0{i + 1}
                 </span>
               </div>
-              <h3 className="font-display font-semibold text-xl text-white">
+              <h3 className="font-display font-semibold text-2xl text-white leading-tight">
                 {s.title}
               </h3>
               <p className="mt-3 text-white/65 leading-relaxed text-[15px]">

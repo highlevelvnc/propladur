@@ -72,24 +72,27 @@ export function Loader() {
           Porto · Portugal
         </span>
 
-        {/* Brand mark */}
+        {/* Brand seal */}
         <div className="relative">
+          <span
+            aria-hidden
+            className="absolute inset-0 -m-10 rounded-full bg-gold-400/10 blur-3xl"
+          />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/logo.png"
             alt="PRO PLADUR"
-            width={280}
-            height={88}
-            className="h-20 sm:h-24 w-auto object-contain logo-dark"
-          />
-          <span
-            aria-hidden
-            className="block mx-auto mt-5 h-px w-40 bg-gradient-to-r from-transparent via-gold-400 to-transparent"
+            width={160}
+            height={160}
+            className="relative h-28 w-28 sm:h-32 sm:w-32 object-contain logo-glow"
           />
         </div>
-
-        <p className="mt-6 max-w-md text-sm text-white/55 leading-relaxed">
-          A preparar o seu espaço.
+        <span
+          aria-hidden
+          className="block mt-6 h-px w-40 bg-gradient-to-r from-transparent via-gold-400 to-transparent"
+        />
+        <p className="mt-4 font-display italic-accent text-xl text-white/85">
+          Acabamentos que constroem confiança.
         </p>
 
         {/* Trowel / level-meter progress bar */}

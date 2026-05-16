@@ -15,15 +15,23 @@ export function Footer() {
     <footer className="relative bg-graphite-950 border-t border-white/5">
       <div className="container py-16 grid gap-12 lg:grid-cols-4">
         <div className="lg:col-span-1">
-          <div className="flex items-center">
+          <div className="flex items-center gap-4">
             <Image
               src="/logo.png"
               alt={COMPANY.name}
-              width={200}
-              height={64}
-              className="h-14 w-auto object-contain logo-dark"
+              width={120}
+              height={120}
+              className="h-16 w-16 object-contain logo-glow"
             />
-            <span className="sr-only">{COMPANY.name}</span>
+            <div className="flex flex-col leading-tight">
+              <span className="font-display font-semibold text-2xl text-white">
+                <span className="gold-text">PRO</span>{" "}
+                <span className="italic-accent">PLADUR</span>
+              </span>
+              <span className="label-caps text-muted mt-1">
+                Porto · Portugal
+              </span>
+            </div>
           </div>
           <p className="mt-5 text-sm text-white/55 leading-relaxed max-w-xs">
             Empresa do Porto especializada em pladur, acabamentos, pinturas e

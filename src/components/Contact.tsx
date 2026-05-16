@@ -53,7 +53,9 @@ export function Contact() {
           title={
             <>
               Conte-nos o projeto e receba uma{" "}
-              <span className="gold-text">proposta detalhada</span>
+              <span className="italic-accent gold-text">
+                proposta detalhada
+              </span>
             </>
           }
           subtitle="Preencha os dados abaixo ou fale diretamente connosco no WhatsApp. Respondemos no mesmo dia e enviamos a proposta em 24 a 48 horas."

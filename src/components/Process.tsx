@@ -38,8 +38,11 @@ export function Process() {
           eyebrow="Como trabalhamos"
           title={
             <>
-              Um <span className="gold-text">processo simples</span>, claro e
-              sem surpresas
+              Um{" "}
+              <span className="italic-accent gold-text">
+                processo simples
+              </span>
+              , claro e sem surpresas
             </>
           }
           subtitle="Quatro passos para transformar a sua ideia numa obra terminada, com prazos e custos previsíveis do início ao fim."

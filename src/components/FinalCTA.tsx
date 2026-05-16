@@ -17,9 +17,11 @@ export function FinalCTA() {
           className="mx-auto max-w-3xl text-center"
         >
           <span className="label-caps text-gold-300">Pronto para avançar?</span>
-          <h2 className="mt-5 font-display font-bold tracking-tightish text-3xl sm:text-5xl text-white">
+          <h2 className="mt-5 font-display font-semibold tracking-tight text-4xl sm:text-6xl leading-[1.05] text-white">
             Vamos transformar o seu espaço com o{" "}
-            <span className="gold-text">acabamento que merece.</span>
+            <span className="italic-accent gold-text">
+              acabamento que merece.
+            </span>
           </h2>
           <p className="mt-6 text-lg text-white/70">
             Peça o seu orçamento sem compromisso. Resposta no mesmo dia,

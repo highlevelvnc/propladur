@@ -10,50 +10,51 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Graphite scale
+        // Brand palette PRO PLADUR
         graphite: {
-          950: "#0a0c0c",
-          900: "#0d0d0d",
-          850: "#121414",
-          800: "#1a1c1c",
-          700: "#1e2020",
-          600: "#282a2b",
-          500: "#333535",
-          400: "#4d4635",
+          950: "#0b0805", // deeper than premium black, for layering
+          900: "#170F09", // Preto Premium (oficial)
+          850: "#1e1611",
+          800: "#241b14",
+          700: "#2B2B2B", // Grafite Obra (oficial)
+          600: "#3a3a3a",
+          500: "#4a4641",
+          400: "#5d5751",
         },
-        // Premium gold scale
         gold: {
-          50: "#fff8de",
-          100: "#ffe088",
-          200: "#f2ca50",
-          300: "#e9c349",
-          400: "#d4af37",
-          500: "#b58e1f",
-          600: "#8a6a14",
-          700: "#574500",
+          50: "#fbf4dc",
+          100: "#f1e2a4",
+          200: "#e7cc77",
+          300: "#dcb95a",
+          400: "#D6AF4D", // Dourado PRO (oficial)
+          500: "#b5912f",
+          600: "#8d701f",
+          700: "#624c11",
         },
-        ink: "#e2e2e2",
-        muted: "#99907c",
+        cement: "#C9C3B6", // Cimento Técnico (oficial)
+        parchment: "#E7E5E0", // Cinza Claro (oficial)
+        ink: "#E7E5E0",
+        muted: "#a59c8a",
       },
       fontFamily: {
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Georgia", "serif"],
         sans: ["var(--font-body)", "system-ui", "sans-serif"],
       },
       letterSpacing: { tightish: "-0.02em" },
       backgroundImage: {
         "gold-metal":
-          "linear-gradient(135deg, #ffe088 0%, #f2ca50 28%, #d4af37 55%, #b58e1f 80%, #8a6a14 100%)",
+          "linear-gradient(135deg, #f1e2a4 0%, #e7cc77 30%, #D6AF4D 60%, #b5912f 100%)",
         "gold-shine":
           "linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.35) 50%, transparent 65%)",
         "graphite-fade":
-          "linear-gradient(180deg, rgba(13,13,13,0) 0%, rgba(13,13,13,0.85) 75%, #0d0d0d 100%)",
+          "linear-gradient(180deg, rgba(23,15,9,0) 0%, rgba(23,15,9,0.85) 75%, #170F09 100%)",
         grid:
-          "linear-gradient(rgba(212,175,55,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.06) 1px, transparent 1px)",
+          "linear-gradient(rgba(214,175,77,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(214,175,77,0.07) 1px, transparent 1px)",
       },
       backgroundSize: { grid: "48px 48px" },
       boxShadow: {
-        gold: "0 12px 40px -12px rgba(212,175,55,0.45)",
-        card: "0 30px 60px -30px rgba(0,0,0,0.8)",
+        gold: "0 12px 40px -12px rgba(214,175,77,0.5)",
+        card: "0 30px 60px -30px rgba(0,0,0,0.85)",
       },
       borderRadius: { xs: "0.125rem", DEFAULT: "0.25rem" },
       animation: {

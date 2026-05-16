@@ -34,7 +34,7 @@ export function About() {
           <div data-reveal="left" className="relative">
             <div className="relative aspect-[4/5] rounded overflow-hidden border border-white/10">
               <Image
-                src="/portfolio/about.svg"
+                src="/portfolio/team-about.jpg"
                 alt="Equipa PRO PLADUR em obra"
                 fill
                 sizes="(min-width:1024px) 40vw, 100vw"
@@ -56,8 +56,8 @@ export function About() {
               title={
                 <>
                   Uma equipa do Porto,{" "}
-                  <span className="gold-text">especializada</span> e obcecada
-                  pelo detalhe
+                  <span className="italic-accent gold-text">especializada</span>{" "}
+                  e obcecada pelo detalhe
                 </>
               }
             />

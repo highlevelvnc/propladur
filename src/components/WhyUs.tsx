@@ -51,8 +51,10 @@ export function WhyUs() {
           eyebrow="Porquê a PRO PLADUR"
           title={
             <>
-              Oito razões para confiar a sua obra a uma equipa{" "}
-              <span className="gold-text">verdadeiramente especializada</span>
+              Oito razões para confiar a sua obra a uma{" "}
+              <span className="italic-accent gold-text">
+                equipa especializada
+              </span>
             </>
           }
           subtitle="Não vendemos promessas. Vendemos método, transparência e um padrão de acabamento que se vê — e que dura."

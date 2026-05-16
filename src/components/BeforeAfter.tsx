@@ -75,8 +75,10 @@ export function BeforeAfter() {
           title={
             <>
               A diferença que um{" "}
-              <span className="gold-text">acabamento profissional</span> faz no
-              seu espaço
+              <span className="italic-accent gold-text">
+                acabamento profissional
+              </span>{" "}
+              faz no seu espaço
             </>
           }
           subtitle="Mesmas paredes, outra história. Arraste a barra dourada para comparar o estado inicial com o resultado final."

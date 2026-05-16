@@ -4,8 +4,8 @@ import { SectionHeader } from "./SectionHeader";
 const PROJECTS = [
   {
     tag: "Pladur",
-    title: "Montagem completa em apartamento",
-    img: "/portfolio/p1.svg",
+    title: "Montagem de pladur sobre estrutura metálica",
+    img: "/portfolio/p1-real.jpg",
     span: "lg:col-span-2 lg:row-span-2",
   },
   {
@@ -15,9 +15,9 @@ const PROJECTS = [
     span: "",
   },
   {
-    tag: "Divisórias",
-    title: "Divisória acústica em escritório",
-    img: "/portfolio/p3.svg",
+    tag: "Em Obra",
+    title: "Equipa em execução de divisórias",
+    img: "/portfolio/p3-real.jpg",
     span: "",
   },
   {
@@ -28,8 +28,8 @@ const PROJECTS = [
   },
   {
     tag: "Remodelações",
-    title: "Remodelação integral de sala",
-    img: "/portfolio/p5.svg",
+    title: "Intervenção em escadaria interior",
+    img: "/portfolio/p5-real.jpg",
     span: "",
   },
   {
@@ -52,7 +52,7 @@ export function Portfolio() {
           title={
             <>
               O nosso trabalho falado por imagens,{" "}
-              <span className="gold-text">obra a obra</span>
+              <span className="italic-accent gold-text">obra a obra</span>
             </>
           }
           subtitle="Uma seleção de intervenções no Porto e arredores: pladur, tetos falsos, divisórias, pinturas e remodelações chave-na-mão."

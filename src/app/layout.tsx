@@ -1,16 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Hanken_Grotesk } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { COMPANY } from "@/lib/constants";
 
-const display = Montserrat({
+const display = Cormorant_Garamond({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const body = Hanken_Grotesk({
+const body = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-body",
@@ -18,7 +19,7 @@ const body = Hanken_Grotesk({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#0d0d0d",
+  themeColor: "#170F09",
   width: "device-width",
   initialScale: 1,
 };

@@ -43,11 +43,11 @@ export function ParallaxCTA() {
         <h2
           data-reveal
           data-reveal-delay="80"
-          className="font-display font-bold tracking-tightish text-3xl sm:text-5xl text-white"
+          className="font-display font-semibold tracking-tight text-4xl sm:text-6xl leading-[1.05] text-white"
         >
           Do planeamento ao{" "}
-          <span className="gold-text">acabamento final</span>, cada detalhe é
-          decidido por nós.
+          <span className="italic-accent gold-text">acabamento final</span>,
+          cada detalhe é decidido por nós.
         </h2>
         <p
           data-reveal

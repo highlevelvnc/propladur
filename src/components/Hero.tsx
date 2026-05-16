@@ -1,10 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
   const parallaxRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -24,21 +24,19 @@ export function Hero() {
         className="absolute inset-0 -z-10"
         aria-hidden
       >
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/portfolio/hero-poster.jpg"
-          className="h-[120%] w-full object-cover opacity-55"
-        >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
+        <Image
+          src="/portfolio/hero.jpg"
+          alt="Interior em fase de acabamento"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover scale-110"
+        />
       </div>
 
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-graphite-900/85 via-graphite-900/70 to-graphite-900" />
-      <div className="absolute inset-0 -z-10 hero-grid opacity-40" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-graphite-900 via-graphite-900/85 to-graphite-900/40" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-graphite-900/40 via-transparent to-graphite-900" />
+      <div className="absolute inset-0 -z-10 hero-grid opacity-30" />
 
       {/* gold corner accents */}
       <span className="pointer-events-none absolute left-6 top-24 h-24 w-px bg-gradient-to-b from-gold-400 to-transparent" />
@@ -59,10 +57,12 @@ export function Hero() {
           <h1
             data-reveal
             data-reveal-delay="80"
-            className="font-display font-extrabold tracking-tightish text-4xl sm:text-5xl lg:text-[64px] lg:leading-[1.05] text-white"
+            className="font-display font-semibold tracking-tight text-5xl sm:text-6xl lg:text-[80px] lg:leading-[0.98] text-white"
           >
-            Especialistas em <span className="gold-text">Montagem de Pladur</span>{" "}
-            e Acabamentos
+            Especialistas em{" "}
+            <span className="italic-accent gold-text">Pladur</span>
+            <br />e <span className="italic-accent">Acabamentos</span> de
+            excelência.
           </h1>
 
           <p

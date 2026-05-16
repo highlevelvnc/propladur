@@ -9,8 +9,8 @@
 html,
 body {
   overflow-x: clip;
-  background-color: #0d0d0d;
-  color: #e2e2e2;
+  background-color: #170f09;
+  color: #e7e5e0;
 }
 
 html {
@@ -24,8 +24,15 @@ body {
 }
 
 ::selection {
-  background: #d4af37;
-  color: #0d0d0d;
+  background: #d6af4d;
+  color: #170f09;
+}
+
+/* === Display font tuning (Cormorant Garamond) ===
+ * Serif precisa de mais "presença" para não parecer texto de revista.
+ */
+.font-display {
+  letter-spacing: -0.01em;
 }
 
 /* === Scroll-reveal (visible-by-default + IO + fallback) === */
@@ -61,24 +68,29 @@ body {
 /* === Utility patterns === */
 .label-caps {
   font-family: var(--font-body), system-ui, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 11px;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
 }
 
 .gold-text {
   background: linear-gradient(
     135deg,
-    #ffe088 0%,
-    #f2ca50 35%,
-    #d4af37 65%,
-    #b58e1f 100%
+    #f1e2a4 0%,
+    #e7cc77 28%,
+    #d6af4d 62%,
+    #b5912f 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.italic-accent {
+  font-style: italic;
+  font-weight: 500;
 }
 
 .btn-gold {
@@ -88,19 +100,22 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  padding: 0.95rem 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #1a1300;
+  padding: 0.95rem 1.6rem;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #170f09;
   background: linear-gradient(
     135deg,
-    #ffe088 0%,
-    #f2ca50 30%,
-    #d4af37 60%,
-    #b58e1f 100%
+    #f1e2a4 0%,
+    #e7cc77 30%,
+    #d6af4d 65%,
+    #b5912f 100%
   );
-  border-radius: 0.25rem;
-  box-shadow: 0 12px 30px -10px rgba(212, 175, 55, 0.55);
+  border-radius: 0.125rem;
+  box-shadow: 0 12px 30px -10px rgba(214, 175, 77, 0.5);
   transition:
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
@@ -123,8 +138,8 @@ body {
 }
 .btn-gold:hover {
   transform: translateY(-2px);
-  filter: brightness(1.07);
-  box-shadow: 0 18px 40px -12px rgba(212, 175, 55, 0.75);
+  filter: brightness(1.08);
+  box-shadow: 0 18px 40px -12px rgba(214, 175, 77, 0.75);
 }
 .btn-gold:hover::after {
   transform: translateX(120%);
@@ -135,13 +150,16 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  padding: 0.9rem 1.5rem;
+  padding: 0.9rem 1.6rem;
+  font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #f2ca50;
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d6af4d;
+  border: 1px solid rgba(214, 175, 77, 0.45);
   background: rgba(255, 255, 255, 0.02);
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   transition:
     background 0.35s ease,
     border-color 0.35s ease,
@@ -149,32 +167,32 @@ body {
     transform 0.35s ease;
 }
 .btn-outline:hover {
-  border-color: rgba(212, 175, 55, 0.95);
-  background: rgba(212, 175, 55, 0.08);
-  color: #ffe088;
+  border-color: rgba(214, 175, 77, 0.95);
+  background: rgba(214, 175, 77, 0.08);
+  color: #f1e2a4;
   transform: translateY(-2px);
 }
 
 .gold-divider {
   height: 1px;
   width: 56px;
-  background: linear-gradient(90deg, #d4af37, transparent);
+  background: linear-gradient(90deg, #d6af4d, transparent);
 }
 
 .glass {
-  background: rgba(18, 20, 20, 0.72);
+  background: rgba(23, 15, 9, 0.78);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(214, 175, 77, 0.1);
 }
 
 .card {
   background: linear-gradient(
     180deg,
-    rgba(26, 28, 28, 0.85) 0%,
-    rgba(18, 20, 20, 0.95) 100%
+    rgba(43, 43, 43, 0.6) 0%,
+    rgba(23, 15, 9, 0.95) 100%
   );
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(214, 175, 77, 0.08);
   transition:
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
     border-color 0.5s ease,
@@ -183,10 +201,10 @@ body {
 }
 .card:hover {
   transform: translateY(-6px);
-  border-color: rgba(212, 175, 55, 0.4);
+  border-color: rgba(214, 175, 77, 0.4);
   box-shadow:
     0 30px 60px -30px rgba(0, 0, 0, 0.9),
-    0 0 0 1px rgba(212, 175, 55, 0.18) inset;
+    0 0 0 1px rgba(214, 175, 77, 0.18) inset;
 }
 
 /* subtle gold underline animation */
@@ -200,31 +218,29 @@ body {
   bottom: -4px;
   width: 0%;
   height: 1px;
-  background: linear-gradient(90deg, #d4af37, transparent);
+  background: linear-gradient(90deg, #d6af4d, transparent);
   transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .under-gold:hover::after {
   width: 100%;
 }
 
-/* Logo on dark surfaces:
- * invert(1) turns black "PRO" into white; hue-rotate(180deg) rotates the
- * inverted gold back to gold. Net effect: black → white, gold stays gold. */
-.logo-dark {
-  filter: invert(1) hue-rotate(180deg) saturate(1.15);
-}
-
-/* hero ambient grid */
+/* technical blueprint grid */
 .hero-grid {
   background-image: linear-gradient(
-      rgba(212, 175, 55, 0.05) 1px,
+      rgba(214, 175, 77, 0.05) 1px,
       transparent 1px
     ),
-    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(214, 175, 77, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(
     ellipse at center,
     black 30%,
     transparent 75%
   );
+}
+
+/* gold seal glow — useful behind the round PRO PLADUR logo */
+.logo-glow {
+  filter: drop-shadow(0 8px 24px rgba(214, 175, 77, 0.25));
 }

@@ -34,18 +34,24 @@ export function Header() {
       <div className="container flex items-center justify-between gap-8">
         <Link
           href="#inicio"
-          className="flex items-center gap-3"
+          className="flex items-center gap-3 group"
           aria-label={COMPANY.name}
         >
           <Image
             src="/logo.png"
             alt={COMPANY.name}
-            width={180}
-            height={56}
+            width={120}
+            height={120}
             priority
-            className="h-11 sm:h-12 w-auto object-contain logo-dark"
+            className="h-12 w-12 sm:h-14 sm:w-14 object-contain logo-glow transition-transform duration-500 group-hover:rotate-3"
           />
-          <span className="sr-only">{COMPANY.name}</span>
+          <span className="hidden sm:flex flex-col leading-tight">
+            <span className="font-display font-semibold text-xl text-white tracking-tight">
+              <span className="gold-text">PRO</span>{" "}
+              <span className="italic-accent">PLADUR</span>
+            </span>
+            <span className="label-caps text-muted">Porto · Portugal</span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
