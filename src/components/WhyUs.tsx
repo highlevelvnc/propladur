@@ -66,18 +66,38 @@ export function WhyUs() {
               key={b.title}
               data-reveal
               data-reveal-delay={`${(i % 4) * 60}`}
-              className="group relative bg-graphite-850 p-8 transition-colors duration-500 hover:bg-graphite-800"
+              className="group relative bg-graphite-850 p-8 lg:p-10 transition-colors duration-500 hover:bg-graphite-800"
             >
-              <span className="absolute left-8 top-8 font-display text-3xl font-bold gold-text opacity-90">
-                0{i + 1}
+              {/* Big background number */}
+              <span
+                aria-hidden
+                className="absolute right-5 top-3 font-display font-bold text-[110px] leading-none text-gold-400/[0.08] select-none transition-all duration-500 group-hover:text-gold-400/15"
+              >
+                {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-14 font-display font-semibold text-white text-lg leading-snug">
+
+              {/* Foreground number badge */}
+              <div className="flex items-center gap-3">
+                <span className="font-display font-semibold text-2xl gold-text leading-none">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span
+                  aria-hidden
+                  className="h-px w-8 bg-gold-400/60 transition-all duration-500 group-hover:w-12 group-hover:bg-gold-400"
+                />
+              </div>
+
+              <h3 className="relative mt-6 font-sans font-semibold tracking-tight text-white text-xl lg:text-[22px] leading-tight">
                 {b.title}
               </h3>
-              <p className="mt-3 text-sm text-white/60 leading-relaxed">
+              <p className="relative mt-3 text-[15px] text-white/75 leading-relaxed">
                 {b.desc}
               </p>
-              <span className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-400/0 to-transparent transition-all duration-500 group-hover:via-gold-400/70" />
+
+              <span
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-400/0 to-transparent transition-all duration-500 group-hover:via-gold-400/70"
+              />
             </div>
           ))}
         </div>
