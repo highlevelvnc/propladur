@@ -32,21 +32,21 @@ export function Header() {
           : "bg-transparent py-5 border-b border-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between gap-8">
+      <div className="container relative flex items-center justify-between gap-8">
         <Link
           href="#inicio"
-          className="flex items-center gap-3 group"
           aria-label={COMPANY.name}
+          className="flex items-center gap-3 group lg:static absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0"
         >
           <Image
             src="/logo.png"
             alt={COMPANY.name}
-            width={120}
-            height={120}
+            width={160}
+            height={160}
             priority
-            className="h-12 w-12 sm:h-14 sm:w-14 object-contain logo-glow transition-transform duration-500 group-hover:rotate-3"
+            className="h-16 w-16 lg:h-14 lg:w-14 object-contain logo-glow transition-transform duration-500 group-hover:rotate-3"
           />
-          <span className="hidden sm:flex flex-col leading-tight">
+          <span className="hidden lg:flex flex-col leading-tight">
             <span className="font-display font-semibold text-xl text-white tracking-tight">
               <span className="gold-text">PRO</span>{" "}
               <span className="italic-accent">PLADUR</span>
@@ -84,7 +84,7 @@ export function Header() {
           aria-label="Abrir menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden grid place-items-center w-11 h-11 rounded border border-white/10 text-white"
+          className="lg:hidden grid place-items-center w-11 h-11 rounded border border-white/10 text-white ml-auto"
         >
           <span className="sr-only">Menu</span>
           <div className="relative w-5 h-3">
@@ -104,7 +104,7 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden fixed inset-x-0 top-[68px] bottom-0 transition-all duration-500 ${
+        className={`lg:hidden fixed inset-x-0 top-[88px] bottom-0 transition-all duration-500 ${
           open
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
