@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+.DS_Store
+.env*.local
+/stitch_*/
+/.claude/
+/PHOTO-*.jpg
+/VIDEO-*.mp4
+/propladurlogo.png
+/servico*.mp4
