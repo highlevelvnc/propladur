@@ -1,5 +1,22 @@
 export type GalleryItem = { src: string; w: number; h: number };
-export const GALLERY: GalleryItem[] = [
+
+// Curated featured order — premium "after" shots first.
+const FEATURED_ORDER = [
+  "/portfolio/gallery/g050.jpg",
+  "/portfolio/gallery/g080.jpg",
+  "/portfolio/gallery/g021.jpg",
+  "/portfolio/gallery/g010.jpg",
+  "/portfolio/gallery/g013.jpg",
+  "/portfolio/gallery/g060.jpg",
+  "/portfolio/gallery/g020.jpg",
+  "/portfolio/gallery/g070.jpg",
+  "/portfolio/gallery/g090.jpg",
+  "/portfolio/gallery/g030.jpg",
+  "/portfolio/gallery/g040.jpg",
+  "/portfolio/gallery/g003.jpg",
+];
+
+const ALL: GalleryItem[] = [
   { src: "/portfolio/gallery/g001.jpg", w: 900, h: 1600 },
   { src: "/portfolio/gallery/g002.jpg", w: 900, h: 1600 },
   { src: "/portfolio/gallery/g003.jpg", w: 1600, h: 900 },
@@ -98,3 +115,11 @@ export const GALLERY: GalleryItem[] = [
   { src: "/portfolio/gallery/g096.jpg", w: 1600, h: 1066 },
   { src: "/portfolio/gallery/g097.jpg", w: 1600, h: 1066 },
 ];
+
+const featured = FEATURED_ORDER
+  .map((src) => ALL.find((it) => it.src === src))
+  .filter((x): x is GalleryItem => Boolean(x));
+
+const rest = ALL.filter((it) => !FEATURED_ORDER.includes(it.src));
+
+export const GALLERY: GalleryItem[] = [...featured, ...rest];

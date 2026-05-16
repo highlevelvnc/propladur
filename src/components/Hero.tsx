@@ -25,12 +25,13 @@ export function Hero() {
         aria-hidden
       >
         <Image
-          src="/portfolio/hero.jpg"
-          alt="Interior em fase de acabamento"
+          src="/portfolio/gallery/g080.jpg"
+          alt="Corredor de habitação com acabamento premium executado pela PRO PLADUR"
           fill
           priority
           sizes="100vw"
           className="object-cover scale-110"
+          style={{ objectPosition: "center 35%" }}
         />
       </div>
 
@@ -50,7 +51,8 @@ export function Hero() {
           >
             <span className="gold-divider" />
             <span className="label-caps text-gold-300">
-              Empresa especializada no Porto · Desde a estrutura ao acabamento
+              + de 100 obras concluídas no Porto · Desde a estrutura ao
+              acabamento
             </span>
           </div>
 
@@ -112,8 +114,8 @@ export function Hero() {
               desc: "Sem subcontratações: quem orça é quem executa.",
             },
             {
-              title: "Orçamento sem compromisso",
-              desc: "Proposta clara em 24h, com prazos e custos discriminados.",
+              title: "100+ obras concluídas",
+              desc: "Mais de uma centena de projetos entregues no Porto.",
             },
           ].map((f, i) => (
             <div

@@ -77,9 +77,10 @@ export function About() {
               data-reveal-delay="220"
               className="mt-4 text-white/70 leading-relaxed"
             >
-              Cada projeto é tratado como uma obra única — com método,
-              organização e a mesma exigência que aplicaríamos à nossa casa.
-              Não vendemos volume. Vendemos qualidade que se vê e que dura.
+              Com mais de uma centena de obras concluídas, cada projeto
+              continua a ser tratado como o primeiro — com o mesmo método,
+              organização e exigência que aplicaríamos à nossa casa. Não
+              vendemos volume. Vendemos qualidade que se vê e que dura.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">

@@ -54,12 +54,12 @@ export function Gallery() {
           eyebrow="Galeria de obra"
           title={
             <>
-              Mais de uma{" "}
-              <span className="italic-accent gold-text">centena de obras</span>{" "}
-              executadas no Porto e arredores
+              {GALLERY.length}+ fotografias de{" "}
+              <span className="italic-accent gold-text">obras reais</span>{" "}
+              executadas
             </>
           }
-          subtitle="Pladur, tetos falsos, divisórias, acabamentos e remodelações. Clique em qualquer imagem para ampliar."
+          subtitle="Acabamentos, tetos falsos, divisórias, cozinhas, suites e corredores em projetos no Porto e arredores. Clique em qualquer imagem para ampliar."
         />
 
         {/* Masonry via CSS columns */}

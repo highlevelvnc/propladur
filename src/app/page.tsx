@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { WhyUs } from "@/components/WhyUs";
+import { Stats } from "@/components/Stats";
 import { ParallaxCTA } from "@/components/ParallaxCTA";
 import { Process } from "@/components/Process";
 import { Portfolio } from "@/components/Portfolio";
@@ -23,6 +24,7 @@ export default function Page() {
       <main id="inicio">
         <Hero />
         <Services />
+        <Stats />
         <WhyUs />
         <ParallaxCTA />
         <Process />

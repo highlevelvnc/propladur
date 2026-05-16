@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { WHATSAPP_URL } from "@/lib/constants";
 
@@ -24,16 +25,14 @@ export function ParallaxCTA() {
   return (
     <section className="relative isolate overflow-hidden h-[70vh] min-h-[460px]">
       <div ref={bgRef} className="absolute inset-0 -z-10 will-change-transform">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="h-full w-full object-cover opacity-65"
-          poster="/portfolio/parallax-poster.jpg"
-        >
-          <source src="/videos/parallax.mp4" type="video/mp4" />
-        </video>
+        <Image
+          src="/portfolio/gallery/g050.jpg"
+          alt="Sala remodelada pela PRO PLADUR — tetos falsos com sanca LED e wainscoting"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-65"
+          style={{ objectPosition: "center 40%" }}
+        />
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-graphite-900/85 via-graphite-900/65 to-graphite-900/95" />
       <div className="container h-full flex flex-col justify-center items-start max-w-3xl">
