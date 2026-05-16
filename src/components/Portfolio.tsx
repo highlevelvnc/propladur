@@ -10,8 +10,8 @@ const PROJECTS = [
   },
   {
     tag: "Tetos Falsos",
-    title: "Teto falso com sanca e LED",
-    img: "/portfolio/p2.svg",
+    title: "Execução de teto falso em pladur",
+    img: "/portfolio/gallery/g003.jpg",
     span: "",
   },
   {
@@ -21,21 +21,21 @@ const PROJECTS = [
     span: "",
   },
   {
-    tag: "Pintura",
-    title: "Pintura interior em moradia",
-    img: "/portfolio/p4.svg",
+    tag: "Remodelações",
+    title: "Renovação de espaço interior",
+    img: "/portfolio/gallery/g013.jpg",
     span: "lg:col-span-2",
   },
   {
-    tag: "Remodelações",
+    tag: "Escadaria",
     title: "Intervenção em escadaria interior",
     img: "/portfolio/p5-real.jpg",
     span: "",
   },
   {
     tag: "Acabamentos",
-    title: "Remates e perfis decorativos",
-    img: "/portfolio/p6.svg",
+    title: "Remates e finalizações",
+    img: "/portfolio/gallery/g021.jpg",
     span: "",
   },
 ];
@@ -48,14 +48,14 @@ export function Portfolio() {
     >
       <div className="container">
         <SectionHeader
-          eyebrow="Projetos recentes"
+          eyebrow="Projetos em destaque"
           title={
             <>
-              O nosso trabalho falado por imagens,{" "}
+              Trabalho que se vê,{" "}
               <span className="italic-accent gold-text">obra a obra</span>
             </>
           }
-          subtitle="Uma seleção de intervenções no Porto e arredores: pladur, tetos falsos, divisórias, pinturas e remodelações chave-na-mão."
+          subtitle="Uma amostra dos nossos projetos recentes em pladur, tetos falsos, divisórias e remodelações. Para ver mais, consulte a galeria completa abaixo."
         />
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-4 auto-rows-[280px]">

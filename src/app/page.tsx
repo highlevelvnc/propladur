@@ -5,6 +5,7 @@ import { WhyUs } from "@/components/WhyUs";
 import { ParallaxCTA } from "@/components/ParallaxCTA";
 import { Process } from "@/components/Process";
 import { Portfolio } from "@/components/Portfolio";
+import { Gallery } from "@/components/Gallery";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { About } from "@/components/About";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -26,6 +27,7 @@ export default function Page() {
         <ParallaxCTA />
         <Process />
         <Portfolio />
+        <Gallery />
         <BeforeAfter />
         <About />
         <FinalCTA />
