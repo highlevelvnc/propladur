@@ -245,6 +245,58 @@ body {
   filter: drop-shadow(0 8px 24px rgba(214, 175, 77, 0.25));
 }
 
+/* === Legal pages (privacidade / termos) === */
+.legal h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 2.5rem;
+  letter-spacing: -0.01em;
+}
+.legal h3 {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+.legal a {
+  color: #d6af4d;
+  text-decoration: underline;
+  text-decoration-color: rgba(214, 175, 77, 0.45);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.3s;
+}
+.legal a:hover {
+  text-decoration-color: #d6af4d;
+}
+.legal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0;
+}
+.legal ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin: 0.5rem 0;
+}
+.legal ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #d6af4d;
+}
+.legal strong {
+  color: #fff;
+  font-weight: 600;
+}
+
 /* Continuous gold shimmer for hero accent words */
 .gold-shimmer {
   background: linear-gradient(

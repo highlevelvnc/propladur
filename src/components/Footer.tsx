@@ -111,12 +111,25 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted">
+        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted">
           <p>
             © {new Date().getFullYear()} {COMPANY.name}. Todos os direitos
             reservados.
           </p>
-          <p>{COMPANY.tagline}</p>
+          <nav
+            aria-label="Legal"
+            className="flex items-center gap-x-5 gap-y-2 flex-wrap justify-center"
+          >
+            <Link href="/privacidade" className="hover:text-white">
+              Privacidade
+            </Link>
+            <Link href="/termos" className="hover:text-white">
+              Termos
+            </Link>
+            <Link href="/contactos" className="hover:text-white">
+              Contactos
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

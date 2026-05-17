@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { COMPANY, SOCIAL } from "@/lib/constants";
+import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@/components/Analytics";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
@@ -46,6 +48,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: COMPANY.name }],
   creator: COMPANY.name,
+  applicationName: COMPANY.name,
+  appleWebApp: {
+    capable: true,
+    title: COMPANY.name,
+    statusBarStyle: "black-translucent",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -107,6 +115,8 @@ export default function RootLayout({
           Saltar para o conteúdo
         </a>
         {children}
+        <CookieBanner />
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
