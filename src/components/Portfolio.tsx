@@ -58,7 +58,7 @@ export function Portfolio() {
           subtitle="Uma amostra dos nossos projetos recentes em pladur, tetos falsos, divisórias e remodelações. Para ver mais, consulte a galeria completa abaixo."
         />
 
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-4 auto-rows-[280px]">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-4 auto-rows-[260px] sm:auto-rows-[280px]">
           {PROJECTS.map((p, i) => (
             <figure
               key={p.title}
@@ -73,7 +73,7 @@ export function Portfolio() {
                 sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
                 className="object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-graphite-900 via-graphite-900/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-graphite-900 via-graphite-900/50 to-transparent lg:via-graphite-900/30" />
               <figcaption className="absolute inset-x-0 bottom-0 p-6 flex flex-col gap-1">
                 <span className="label-caps text-gold-300">{p.tag}</span>
                 <h3 className="font-display font-semibold text-lg text-white">

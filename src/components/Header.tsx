@@ -28,8 +28,8 @@ export function Header() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass py-3"
-          : "bg-transparent py-5 border-b border-transparent"
+          ? "glass py-2 lg:py-3"
+          : "bg-transparent py-4 lg:py-5 border-b border-transparent"
       }`}
     >
       <div className="container relative flex items-center justify-between gap-8">

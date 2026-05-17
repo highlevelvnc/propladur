@@ -13,6 +13,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { MobileBottomBar } from "@/components/MobileBottomBar";
 import { RevealProvider } from "@/components/RevealProvider";
 import { Loader } from "@/components/Loader";
 
@@ -37,6 +38,7 @@ export default function Page() {
       </main>
       <Footer />
       <FloatingWhatsApp />
+      <MobileBottomBar />
     </RevealProvider>
   );
 }

@@ -49,37 +49,46 @@ export function Process() {
           align="center"
         />
 
-        <div className="mt-20 relative">
+        <div className="mt-20 relative" data-reveal>
+          {/* Horizontal line desktop */}
           <div
             aria-hidden
-            className="absolute top-12 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-400/40 to-transparent hidden lg:block"
+            className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-gold-400/0 via-gold-400/60 to-gold-400/0 draw-line"
           />
-          <div className="grid gap-8 lg:gap-6 lg:grid-cols-4">
+          {/* Vertical line mobile */}
+          <div
+            aria-hidden
+            className="lg:hidden absolute top-12 bottom-12 left-12 w-px bg-gradient-to-b from-gold-400/0 via-gold-400/50 to-gold-400/0 draw-line-v"
+          />
+
+          <div className="grid gap-12 lg:gap-6 lg:grid-cols-4">
             {STEPS.map((s, i) => (
               <div
                 key={s.num}
                 data-reveal
-                data-reveal-delay={`${i * 120}`}
-                className="relative flex flex-col items-center text-center px-4"
+                data-reveal-delay={`${i * 140}`}
+                className="relative flex lg:flex-col items-start lg:items-center gap-5 lg:gap-0 text-left lg:text-center lg:px-4"
               >
-                <div className="relative">
+                <div className="relative shrink-0">
                   <span
                     aria-hidden
                     className="absolute inset-0 rounded-full bg-gold-400/15 blur-xl"
                   />
-                  <span className="relative grid place-items-center h-24 w-24 rounded-full border border-gold-400/40 bg-graphite-850 text-3xl text-gold-300">
+                  <span className="relative grid place-items-center h-24 w-24 rounded-full border border-gold-400/40 bg-graphite-850 text-3xl text-gold-300 transition-transform duration-500 hover:scale-105">
                     {s.icon}
                   </span>
                 </div>
-                <span className="mt-6 font-display text-5xl font-bold gold-text leading-none">
-                  {s.num}
-                </span>
-                <h3 className="mt-4 font-display font-semibold text-xl text-white">
-                  {s.title}
-                </h3>
-                <p className="mt-3 text-white/65 leading-relaxed text-sm max-w-[260px]">
-                  {s.desc}
-                </p>
+                <div className="flex-1 lg:contents">
+                  <span className="block lg:mt-6 font-display text-4xl lg:text-5xl font-bold gold-text leading-none">
+                    {s.num}
+                  </span>
+                  <h3 className="mt-2 lg:mt-4 font-sans font-semibold text-xl text-white tracking-tight">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 lg:mt-3 text-white/70 leading-relaxed text-[15px] max-w-[260px]">
+                    {s.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

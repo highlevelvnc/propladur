@@ -75,10 +75,10 @@ export function Services() {
               key={s.title}
               data-reveal
               data-reveal-delay={`${i * 70}`}
-              className="card p-7 rounded group"
+              className="card p-7 rounded group active:scale-[0.98] transition-transform"
             >
               <div className="flex items-center justify-between mb-6">
-                <span className="grid place-items-center h-12 w-12 rounded border border-gold-400/30 text-gold-300 text-xl bg-graphite-800/60 transition-all duration-500 group-hover:border-gold-400 group-hover:bg-gold-400/10">
+                <span className="grid place-items-center h-12 w-12 rounded border border-gold-400/30 text-gold-300 text-xl bg-graphite-800/60 transition-all duration-500 group-hover:border-gold-400 group-hover:bg-gold-400/10 group-hover:rotate-6 group-hover:scale-110">
                   {s.icon}
                 </span>
                 <span className="label-caps text-muted/60">

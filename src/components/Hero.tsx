@@ -59,11 +59,12 @@ export function Hero() {
           <h1
             data-reveal
             data-reveal-delay="80"
-            className="font-display font-semibold tracking-tight text-5xl sm:text-6xl lg:text-[80px] lg:leading-[0.98] text-white"
+            className="font-display font-semibold tracking-tight text-[2.6rem] leading-[1.02] sm:text-6xl lg:text-[80px] lg:leading-[0.98] text-white"
           >
             Especialistas em{" "}
-            <span className="italic-accent gold-text">Pladur</span>
-            <br />e <span className="italic-accent">Acabamentos</span> de
+            <span className="italic-accent gold-shimmer">Pladur</span>
+            <br className="hidden sm:inline" />{" "}
+            e <span className="italic-accent">Acabamentos</span> de
             excelência.
           </h1>
 
@@ -87,13 +88,24 @@ export function Hero() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold"
+              className="btn-gold group/cta"
             >
               Pedir Orçamento
-              <span aria-hidden>→</span>
+              <span
+                aria-hidden
+                className="inline-block transition-transform duration-500 group-hover/cta:translate-x-1"
+              >
+                →
+              </span>
             </a>
-            <a href="#servicos" className="btn-outline">
+            <a href="#servicos" className="btn-outline group/cta">
               Ver Serviços
+              <span
+                aria-hidden
+                className="inline-block transition-transform duration-500 group-hover/cta:translate-y-0.5"
+              >
+                ↓
+              </span>
             </a>
           </div>
         </div>
@@ -122,17 +134,17 @@ export function Hero() {
               key={f.title}
               data-reveal
               data-reveal-delay={`${440 + i * 90}`}
-              className="card p-5 rounded"
+              className="card p-5 rounded group/chip"
             >
               <div className="flex items-center gap-3 mb-2">
-                <span className="grid place-items-center h-8 w-8 rounded-xs bg-gold-metal text-graphite-900 text-xs font-bold">
+                <span className="grid place-items-center h-9 w-9 rounded-xs bg-gold-metal text-graphite-900 text-sm font-bold shadow-gold transition-transform duration-500 group-hover/chip:scale-110 group-hover/chip:rotate-3">
                   0{i + 1}
                 </span>
-                <h3 className="font-display font-semibold text-white">
+                <h3 className="font-sans font-semibold text-white text-base">
                   {f.title}
                 </h3>
               </div>
-              <p className="text-sm text-white/65 leading-relaxed">{f.desc}</p>
+              <p className="text-sm text-white/70 leading-relaxed">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -141,11 +153,11 @@ export function Hero() {
         <a
           href="#servicos"
           aria-label="Descer"
-          className="absolute left-1/2 -translate-x-1/2 bottom-8 hidden md:flex flex-col items-center gap-2 text-muted hover:text-gold-300 transition"
+          className="absolute left-1/2 -translate-x-1/2 bottom-6 sm:bottom-8 flex flex-col items-center gap-2 text-muted hover:text-gold-300 transition"
         >
           <span className="label-caps">Scroll</span>
-          <span className="relative h-10 w-px bg-white/15 overflow-hidden">
-            <span className="absolute inset-x-0 top-0 h-3 bg-gold-400 animate-[fadeIn_2s_ease-in-out_infinite]" />
+          <span aria-hidden className="nudge text-gold-300 text-lg">
+            ↓
           </span>
         </a>
       </div>

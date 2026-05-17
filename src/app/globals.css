@@ -244,3 +244,74 @@ body {
 .logo-glow {
   filter: drop-shadow(0 8px 24px rgba(214, 175, 77, 0.25));
 }
+
+/* Continuous gold shimmer for hero accent words */
+.gold-shimmer {
+  background: linear-gradient(
+    100deg,
+    #b5912f 0%,
+    #d6af4d 25%,
+    #f1e2a4 45%,
+    #ffffff 50%,
+    #f1e2a4 55%,
+    #d6af4d 75%,
+    #b5912f 100%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-shimmer 5.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+@keyframes gold-shimmer {
+  0%,
+  10% {
+    background-position: 100% 0;
+  }
+  60%,
+  100% {
+    background-position: -100% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gold-shimmer {
+    animation: none;
+  }
+}
+
+/* Soft bounce for scroll cue arrow */
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+.nudge {
+  animation: nudge 1.8s ease-in-out infinite;
+}
+
+/* Process timeline draw — line scales from left when reveal fires */
+.draw-line {
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-revealed="true"] .draw-line,
+[data-revealed="true"].draw-line {
+  transform: scaleX(1);
+}
+.draw-line-v {
+  transform-origin: top center;
+  transform: scaleY(0);
+  transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-revealed="true"] .draw-line-v,
+[data-revealed="true"].draw-line-v {
+  transform: scaleY(1);
+}

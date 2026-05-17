@@ -26,7 +26,7 @@ export function FloatingWhatsApp() {
 
   return (
     <div
-      className={`fixed bottom-6 right-6 z-40 flex items-end gap-3 transition-all duration-500 ${
+      className={`hidden lg:flex fixed bottom-6 right-6 z-40 items-end gap-3 transition-all duration-500 ${
         visible
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-4 pointer-events-none"
