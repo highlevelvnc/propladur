@@ -21,9 +21,15 @@ const STEPS = [
   },
   {
     num: "04",
-    title: "Execução e Entrega",
+    title: "Execução em Obra",
+    icon: "▣",
+    desc: "Equipa própria no terreno, comunicação diária e obra limpa do primeiro ao último dia.",
+  },
+  {
+    num: "05",
+    title: "Entrega e Revisão",
     icon: "✓",
-    desc: "Equipa própria no terreno, comunicação diária e obra entregue limpa e revista.",
+    desc: "Revisão final ao detalhe consigo. Só fechamos a obra quando confirmar que está irrepreensível.",
   },
 ];
 
@@ -61,7 +67,7 @@ export function Process() {
             className="lg:hidden absolute top-12 bottom-12 left-12 w-px bg-gradient-to-b from-gold-400/0 via-gold-400/50 to-gold-400/0 draw-line-v"
           />
 
-          <div className="grid gap-12 lg:gap-6 lg:grid-cols-4">
+          <div className="grid gap-12 lg:gap-4 lg:grid-cols-5">
             {STEPS.map((s, i) => (
               <div
                 key={s.num}

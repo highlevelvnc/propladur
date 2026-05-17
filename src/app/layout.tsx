@@ -55,12 +55,21 @@ export const metadata: Metadata = {
     description:
       "Pladur, tetos falsos, divisórias, pinturas e remodelações chave-na-mão no Porto. Equipa especializada, prazos cumpridos e acabamentos impecáveis.",
     siteName: COMPANY.name,
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: `${COMPANY.name} — sala remodelada com acabamentos premium`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${COMPANY.name} — Pladur e Acabamentos no Porto`,
     description:
       "Especialistas em pladur e acabamentos no Porto. Peça orçamento sem compromisso.",
+    images: ["/og.jpg"],
   },
   robots: { index: true, follow: true },
 };
@@ -91,6 +100,12 @@ export default function RootLayout({
   return (
     <html lang="pt-PT" className={`${display.variable} ${body.variable}`}>
       <body className="bg-graphite-900 text-ink antialiased">
+        <a
+          href="#inicio"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:btn-gold"
+        >
+          Saltar para o conteúdo
+        </a>
         {children}
         <script
           type="application/ld+json"

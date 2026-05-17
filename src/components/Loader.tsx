@@ -14,6 +14,16 @@ export function Loader() {
   const [out, setOut] = useState(false);
 
   useEffect(() => {
+    // Show loader at most once per browser session
+    if (typeof window !== "undefined") {
+      try {
+        if (window.sessionStorage.getItem("ppLoaderSeen")) {
+          setHidden(true);
+          return;
+        }
+      } catch {}
+    }
+
     const start = performance.now();
     const MIN = 900;
     const HARD = 3500;
@@ -23,7 +33,12 @@ export function Loader() {
       const wait = Math.max(0, MIN - elapsed);
       window.setTimeout(() => {
         setOut(true);
-        window.setTimeout(() => setHidden(true), 700);
+        window.setTimeout(() => {
+          setHidden(true);
+          try {
+            window.sessionStorage.setItem("ppLoaderSeen", "1");
+          } catch {}
+        }, 700);
       }, wait);
     };
 

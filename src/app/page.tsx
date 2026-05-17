@@ -3,11 +3,12 @@ import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { WhyUs } from "@/components/WhyUs";
 import { Stats } from "@/components/Stats";
+import { VideoShowcase } from "@/components/VideoShowcase";
 import { ParallaxCTA } from "@/components/ParallaxCTA";
 import { Process } from "@/components/Process";
 import { Portfolio } from "@/components/Portfolio";
 import { Gallery } from "@/components/Gallery";
-import { BeforeAfter } from "@/components/BeforeAfter";
+// import { BeforeAfter } from "@/components/BeforeAfter"; // ativar quando houver fotos reais
 import { About } from "@/components/About";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Contact } from "@/components/Contact";
@@ -26,12 +27,13 @@ export default function Page() {
         <Hero />
         <Services />
         <Stats />
+        <VideoShowcase />
         <WhyUs />
         <ParallaxCTA />
         <Process />
         <Portfolio />
         <Gallery />
-        <BeforeAfter />
+        {/* <BeforeAfter /> — re-ativar quando o cliente enviar 2 pares antes/depois */}
         <About />
         <FinalCTA />
         <Contact />
