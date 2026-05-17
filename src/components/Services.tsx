@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SectionHeader } from "./SectionHeader";
 import { WHATSAPP_URL } from "@/lib/constants";
 
@@ -6,36 +7,43 @@ const SERVICES = [
     icon: "▣",
     title: "Montagem de Pladur",
     desc: "Estruturas em perfil metálico e placas em pladur com isolamento térmico e acústico integrado.",
+    href: "/servicos/pladur-porto",
   },
   {
     icon: "▤",
     title: "Tetos Falsos",
     desc: "Tetos planos, rebaixados ou decorativos, com sancas, iluminação embutida e acabamento liso.",
+    href: "/servicos/tetos-falsos-porto",
   },
   {
     icon: "▥",
     title: "Divisórias em Pladur",
     desc: "Paredes interiores rápidas de executar, com excelente isolamento acústico e mínimo impacto na obra.",
+    href: "/servicos/divisorias-porto",
   },
   {
     icon: "❘",
     title: "Pinturas Interiores e Exteriores",
     desc: "Preparação completa, primário e pintura final em acabamento liso, duradouro e uniforme.",
+    href: "/servicos/pinturas-porto",
   },
   {
     icon: "◰",
     title: "Renovações de Espaços",
     desc: "Renovação parcial de habitações, escritórios e estabelecimentos, com prazos curtos e disrupção mínima.",
+    href: "/servicos/remodelacoes-porto",
   },
   {
     icon: "◫",
     title: "Remodelações Gerais",
     desc: "Coordenação integral da obra: pladur, pinturas, tetos, eletricidade e acabamentos chave-na-mão.",
+    href: "/servicos/remodelacoes-porto",
   },
   {
     icon: "✦",
     title: "Acabamentos e Remates",
     desc: "Juntas, perfis decorativos, rodapés e remates finais executados com rigor milimétrico.",
+    href: "/servicos/pladur-porto",
   },
 ];
 
@@ -91,7 +99,11 @@ export function Services() {
               <p className="mt-3 text-white/65 leading-relaxed text-[15px]">
                 {s.desc}
               </p>
-              <div className="mt-6 flex items-center gap-2 text-gold-300 text-sm">
+              <Link
+                href={s.href}
+                className="mt-6 flex items-center gap-2 text-gold-300 text-sm"
+                aria-label={`Saber mais sobre ${s.title}`}
+              >
                 <span className="under-gold">Saber mais</span>
                 <span
                   aria-hidden
@@ -99,7 +111,7 @@ export function Services() {
                 >
                   →
                 </span>
-              </div>
+              </Link>
             </article>
           ))}
         </div>

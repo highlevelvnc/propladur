@@ -34,10 +34,10 @@ export const SOCIAL = [
 ] as const;
 
 export const NAV_LINKS = [
-  { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Galeria", href: "#galeria" },
-  { label: "Sobre Nós", href: "#sobre" },
-  { label: "Contactos", href: "#contactos" },
+  { label: "Início", href: "/#inicio" },
+  { label: "Serviços", href: "/servicos" },
+  { label: "Projetos", href: "/#projetos" },
+  { label: "Galeria", href: "/#galeria" },
+  { label: "Sobre Nós", href: "/#sobre" },
+  { label: "Contactos", href: "/#contactos" },
 ] as const;

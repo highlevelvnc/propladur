@@ -1,14 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import { COMPANY, NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
 import { SocialIcons } from "./SocialIcons";
 
-const SERVICES = [
-  "Montagem de Pladur",
-  "Tetos Falsos",
-  "Divisórias",
-  "Pinturas",
-  "Renovações",
-  "Remodelações",
+const FOOTER_SERVICES = [
+  { label: "Montagem de Pladur", href: "/servicos/pladur-porto" },
+  { label: "Tetos Falsos", href: "/servicos/tetos-falsos-porto" },
+  { label: "Divisórias", href: "/servicos/divisorias-porto" },
+  { label: "Pinturas", href: "/servicos/pinturas-porto" },
+  { label: "Remodelações", href: "/servicos/remodelacoes-porto" },
+  { label: "Ver todos os serviços", href: "/servicos" },
 ];
 
 export function Footer() {
@@ -63,9 +64,14 @@ export function Footer() {
         <div>
           <h4 className="label-caps text-gold-300 mb-5">Serviços</h4>
           <ul className="space-y-3 text-sm">
-            {SERVICES.map((s) => (
-              <li key={s} className="text-white/70">
-                {s}
+            {FOOTER_SERVICES.map((s) => (
+              <li key={s.href}>
+                <Link
+                  href={s.href}
+                  className="text-white/70 hover:text-white under-gold"
+                >
+                  {s.label}
+                </Link>
               </li>
             ))}
           </ul>
