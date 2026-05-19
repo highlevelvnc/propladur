@@ -131,6 +131,17 @@ export function Footer() {
             </Link>
           </nav>
         </div>
+        <div className="container pb-6 -mt-2 text-center sm:text-right text-[11px] text-muted/70">
+          Website criado por{" "}
+          <a
+            href="https://highlevelmkt.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold-400/80 hover:text-gold-300 under-gold font-medium"
+          >
+            highlevelmkt.com
+          </a>
+        </div>
       </div>
     </footer>
   );
